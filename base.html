@@ -1,0 +1,372 @@
+<html>
+    <head>
+        <!-- Semantic UI -->
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <script src="semantic/semantic.min.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header" class="">
+            <div id="navigation" class="ui stackable secondary pointing menu">
+                <div class="left menu">
+                    <div class="right item">
+                        <div class="item">
+                            DGIST 총학생회
+                        </div>
+                        <div class="ui simple dropdown item">
+                            총학생회 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">DGIST 총학생회 LINK</a>
+                            <a class="item" href="#">조직도</a>
+                            <a class="item" href="{% url 'notice' %}">공지사항</a>
+                            <a class="item" href="#">주요 학생회 성과</a>
+                            <a class="item" href="#">학생회칙</a>
+                            <a class="item" href="#">공약 게시판</a>
+                            <a class="item" href="#">회의록</a>
+                            <a class="item" href="#">예/결산</a>
+                            <a class="item" href="#">기타</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            투표 / 설문 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="{% url 'vote' %}">투표</a>
+                            <a class="item" href="{% url 'survey' %}">설문</a>
+                            <a class="item" href="{% url 'debate' %}">토론/토의</a>
+                            <a class="item" href="#">토론 및 설문 진행상황</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            건의 / 제보 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">학생회에 건의합니다</a>
+                            <a class="item" href="#">학생회에 질문합니다</a>
+                            <a class="item" href="#">학생회에 제안합니다</a>
+                            <a class="item" href="#">학생회에 제보합니다</a>
+                            <a class="item" href="#">자주 묻는 질문</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            행사 / 프로젝트 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">우리들의 행사</a>
+                            <a class="item" href="#">팀원 구합니다</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            Study Platform <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">Study Guide</a>
+                            <a class="item" href="#">과목별 튜터링</a>
+                            <a class="item" href="#">튜터 게시판</a>
+                            <a class="item" href="#">자료 게시판</a>
+                            <a class="item" href="#">자유 게시판</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right menu">
+                    <div class="right item">
+                        <div class="ui action input">
+                            <input type="text" placeholder="정보 입력">
+                            <div class="ui button">검색</div>
+                        </div>
+                        <a class="item">회원가입</a>
+                        <a class="item">로그인</a>
+                        <a class="item">my DGIST</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <h4 class="ui horizontal divider header">
+                <i class="tag icon"></i>
+                투표 / 설문
+            </h4>
+            <br />
+            <div id="vote-survey">
+                <div class="ui link cards">
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Project Timeline</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Activity</h4>
+                            <div class="ui small feed">
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Helen Troy</a> added two pictures
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <button class="ui button">Join Project</button>
+                        </div>
+                    </div>
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Project Timeline</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Activity</h4>
+                            <div class="ui small feed">
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Helen Troy</a> added two pictures
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <button class="ui button">Join Project</button>
+                        </div>
+                    </div>
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Project Timeline</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Activity</h4>
+                            <div class="ui small feed">
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Helen Troy</a> added two pictures
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <button class="ui button">Join Project</button>
+                        </div>
+                    </div>
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Project Timeline</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Activity</h4>
+                            <div class="ui small feed">
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Helen Troy</a> added two pictures
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <button class="ui button">Join Project</button>
+                        </div>
+                    </div>
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header">Project Timeline</div>
+                        </div>
+                        <div class="content">
+                            <h4 class="ui sub header">Activity</h4>
+                            <div class="ui small feed">
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="content">
+                                <div class="summary">
+                                    <a>Helen Troy</a> added two pictures
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <button class="ui button">Join Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h4 id=""class="ui horizontal divider header">
+                <i class="tag icon"></i>
+                공지사항
+            </h4>
+            <br />
+            <div id="notice" class="ui horizontal segments">
+                <div class="ui segment">
+                    <div class="ui text container">
+                        <h3>Title 1</h3>
+                        <p>description description description description description description description description description</p>
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <div class="ui text container">
+                        <h3>Title 2</h3>
+                        <p>description description description description description description description description description</p>
+                    </div>
+                </div>
+                <div class="ui segment">
+                    <div class="ui text container">
+                        <h3>Title 3</h3>
+                        <p>description description description description description description description description description</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h4 id=""class="ui horizontal divider header">
+                <i class="tag icon"></i>
+                더 알아보기
+            </h4>
+            <br />
+            <div id="banner" class="ui container">
+                <div class="ui divided items">
+                    <div class="item">
+                        <div class="image">
+                        <img src="https://semantic-ui.com/images/wireframe/image.png">
+                        </div>
+                        <div class="content">
+                        <a class="header">DGIST 총학생회</a>
+                        <div class="meta">
+                            <span class="cinema">총학생회에 대해 안내합니다.</span>
+                        </div>
+                        <div class="description">
+                            <p> 제 4대 총학생회 링크는............................................................................................................................
+                                ................................................................
+                            </p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui right floated primary button">
+                            자세히 알아보기
+                            <i class="right chevron icon"></i>
+                            </div>
+                            <div class="ui label">IMAX</div>
+                            <div class="ui label"><i class="globe icon"></i> Additional Languages</div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                        <img src="https://semantic-ui.com/images/wireframe/image.png">
+                        </div>
+                        <div class="content">
+                        <a class="header">2018학년도 2학기 튜터링 안내</a>
+                        <div class="meta">
+                            <span class="cinema">2018학년도 2학기 튜터링에 대해 안내합니다.</span>
+                        </div>
+                        <div class="description">
+                            <p>2018학년도 2학기 튜터링으로는 다변수 미적분학, 전자기학, 화학반응의 이해, 분자와 생명현상, 유기화학의 이해, 전기역학, 열 및 통계 물리, 화학속의 물리학, 객체지향 프로그래밍, 자동제어 시스템
+                                등의 과목이 열릴 예정입니다.
+                            </p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui right floated primary button">
+                            자세히 알아보기
+                            <i class="right chevron icon"></i>
+                            </div>
+                            <div class="ui label">Limited</div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                        <img src="https://semantic-ui.com/images/wireframe/image.png">
+                        </div>
+                        <div class="content">
+                        <a class="header">제휴업체 안내</a>
+                        <div class="meta">
+                            <span class="cinema">총학생회 및 DGIST 발전협력팀과 제휴를 맺은 업체 목록에 대해 안내합니다.</span>
+                        </div>
+                        <div class="description">
+                            <p>신신반점 어쩌구, 진국 어쩌구, 오늘 어쩌구, 세탁 풍경 어쩌구, My Hair 어쩌구 ..............................</p>
+                        </div>
+                        <div class="extra">
+                            <div class="ui right floated primary button">
+                            자세히 알아보기
+                            <i class="right chevron icon"></i>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>

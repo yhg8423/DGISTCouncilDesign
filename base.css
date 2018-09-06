@@ -1,0 +1,13 @@
+#main {
+    max-width: 1600px; 
+    margin: 0 auto; 
+    margin-top: 2%;
+}
+
+#main #vote-survey .ui.card {
+    margin: 1%;
+}
+
+#main #notice .ui.segment .ui.text.container {
+    width: 100%
+}
