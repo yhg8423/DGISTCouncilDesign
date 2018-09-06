@@ -1,0 +1,264 @@
+<html>
+    <head>
+        <!-- Semantic UI -->
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <link rel="stylesheet" type="text/css" href="vote.css">
+        <script src="semantic/semantic.min.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header" class="">
+            <div id="navigation" class="ui stackable secondary pointing menu">
+                <div class="left menu">
+                    <div class="right item">
+                        <div class="item">
+                            DGIST 총학생회
+                        </div>
+                        <div class="ui simple dropdown item">
+                            총학생회 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">DGIST 총학생회 LINK</a>
+                            <a class="item" href="#">조직도</a>
+                            <a class="item" href="{% url 'notice' %}">공지사항</a>
+                            <a class="item" href="#">주요 학생회 성과</a>
+                            <a class="item" href="#">학생회칙</a>
+                            <a class="item" href="#">공약 게시판</a>
+                            <a class="item" href="#">회의록</a>
+                            <a class="item" href="#">예/결산</a>
+                            <a class="item" href="#">기타</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            투표 / 설문 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="{% url 'vote' %}">투표</a>
+                            <a class="item" href="{% url 'survey' %}">설문</a>
+                            <a class="item" href="{% url 'debate' %}">토론/토의</a>
+                            <a class="item" href="#">토론 및 설문 진행상황</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            건의 / 제보 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">학생회에 건의합니다</a>
+                            <a class="item" href="#">학생회에 질문합니다</a>
+                            <a class="item" href="#">학생회에 제안합니다</a>
+                            <a class="item" href="#">학생회에 제보합니다</a>
+                            <a class="item" href="#">자주 묻는 질문</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            행사 / 프로젝트 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">우리들의 행사</a>
+                            <a class="item" href="#">팀원 구합니다</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            Study Platform <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">Study Guide</a>
+                            <a class="item" href="#">과목별 튜터링</a>
+                            <a class="item" href="#">튜터 게시판</a>
+                            <a class="item" href="#">자료 게시판</a>
+                            <a class="item" href="#">자유 게시판</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right menu">
+                    <div class="right item">
+                        <div class="ui action input">
+                            <input type="text" placeholder="정보 입력">
+                            <div class="ui button">검색</div>
+                        </div>
+                        <a class="item">회원가입</a>
+                        <a class="item">로그인</a>
+                        <a class="item">my DGIST</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="side-bar" class="ui vertical menu">
+                <div class="item">
+                    <h3 class="ui header">투표 / 설문</h4>
+                    <div class="menu">
+                    <a class="item">투표</a>
+                    <a class="item">설문</a>
+                    <a class="item">토론 / 토의</a>
+                    <a class="item">토론 및 설문 진행상황</a>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="">
+                <div id="vote-view" class="ui segment">
+                    <h1 class="ui center aligned header">대학 평의원회 관련 투표</h2>
+                    <div class="ui clearing divider"></div>
+                    <h2 class="ui left floated header">1. 투표 개요 및 설명</h2>
+                    <div class="ui clearing divider"></div>
+                    <p>해당 투표는 전문연구요원 폐지 및 다수의 병역대체 제도의 폐지에 대한 국방부의 입장에 대해, 학생들이 생각하는 바를 모으고, 현 DGIST의 총학생회가 '전국 대학교 전문연구요원 비상대책위원회'의 일원으로서 학생들을 대표해 어떠한 입장을 취해야 할지 총학생회의 스탠스를 결정하기 위한 투표입니다. 아래의 안건의 세부 내용을 확인하시고, 학생들의 의미있는 의사권과 그 생각을 공유해주시길 바랍니다.<br/>
+                        <br/>
+                        1. 현 전문연구요원 폐지사태 관련 배경<br/>
+                        1) 2016년, 국방부에서 전문연구요원 제도의 폐지를 2019년까지 완료시키겠다는 의사를 보였다. 이는 2019년까지 전문연구요원에 합격하지 못하는 학생들은, 병역대체 제도의 수행이 불가능하다는 의미이다.<br/>
+                        2) 현재 2017년, 해당 문제에 대해 많은 반발 여론들이 일어서고, 대학교들이 비상대책위원회를 구성하고 의견을 표명하였지만, 국방부는 아무런 대답을 하지 않고 있다.<br/>
+                        3) 올해 '전국 대학교 전문연구요원 비상대책위원회'의 각 대학 대표간의 회의가 있을 예정입니다. 이 위원회의 일원인 DGIST 총학생회는 DGIST 학부생들을 대표하여 이 자리에서 학생들의 입장을 대변하게 될 것입니다.<br/>
+                    </p>
+                    <div class="ui clearing divider"></div>
+                    <h2 class="ui left floated header">2. 안건</h2>
+                    <div class="ui clearing divider"></div>
+                    <p>-전문연구요원 제도에 있어서 DGIST 학부생인 당신은 전문연구요원 제도의 폐지에 대해 찬성하는가, 혹은 이에 반대하는가?</p>
+                    <div class="ui clearing divider"></div>
+                    <div id="agreement">
+                        <div class="ui massive buttons">
+                            <button type="button" class="ui positive button" onclick="agreement_check('True')">찬성</button>
+                            <div class="or"></div>
+                            <button type="button" class="ui negative button" onclick="agreement_check('False')">반대</button>
+                        </div>
+                    </div>
+                    <div class="ui clearing divider"></div>
+                    <h2 class="ui left floated header">3. 안건에 관한 당신의 의견을 자유롭게 적어주세요.</h2>
+                    <div class="ui clearing divider"></div>
+                    <div id="vote-comments">    
+                        <div class="ui comments" style="max-width:100%">
+                            <div class="comment">
+                                <a class="avatar">
+                                <img src="https://semantic-ui.com/images/avatar/small/matt.jpg" style="height:auto;">
+                                </a>
+                                <div class="content">
+                                <a class="author">박OO</a>
+                                <div class="metadata">
+                                    <span class="date">Today at 5:42PM</span>
+                                </div>
+                                <div class="text">
+                                    전문연 폐지가 조국의 미래임 ㅎㅎ
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                <img src="https://semantic-ui.com/images/avatar/small/elliot.jpg" style="height:auto;">
+                                </a>
+                                <div class="content">
+                                <a class="author">윤OO</a>
+                                <div class="metadata">
+                                    <span class="date">Yesterday at 12:30AM</span>
+                                </div>
+                                <div class="text">
+                                    <p>난 내가 전문연을 하길 바라.</p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                <img src="https://semantic-ui.com/images/avatar/small/joe.jpg" style="height:auto;">
+                                </a>
+                                <div class="content">
+                                <a class="author">안OO</a>
+                                <div class="metadata">
+                                    <span class="date">1 days ago</span>
+                                </div>
+                                <div class="text">
+                                    전문연구요원 폐지하자고 주장하는 사람.... 누굽니꽈!!!
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                                </div>
+                            </div>
+                            <form class="ui reply form">
+                                <div class="field">
+                                <textarea></textarea>
+                                </div>
+                                <div class="ui blue labeled submit icon button">
+                                <i class="icon edit"></i> Add Reply
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <table class="ui unstackable table">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th class="right aligned">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>Jamie</td>
+                        <td>Approved</td>
+                        <td class="right aligned">Requires call</td>
+                        </tr>
+                        <tr>
+                        <td>Jill</td>
+                        <td>Denied</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <div id="page" class="ui pagination menu">
+                    <a class="active item">
+                      1
+                    </a>
+                    <div class="disabled item">
+                      ...
+                    </div>
+                    <a class="item">
+                      10
+                    </a>
+                    <a class="item">
+                      11
+                    </a>
+                    <a class="item">
+                      12
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <!-- Semantic UI -->
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <link rel="stylesheet" type="text/css" href="survey.css">
+        <script src="semantic/semantic.min.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header" class="">
+            <div id="navigation" class="ui stackable secondary pointing menu">
+                <div class="left menu">
+                    <div class="right item">
+                        <div class="item">
+                            DGIST 총학생회
+                        </div>
+                        <div class="ui simple dropdown item">
+                            총학생회 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">DGIST 총학생회 LINK</a>
+                            <a class="item" href="#">조직도</a>
+                            <a class="item" href="{% url 'notice' %}">공지사항</a>
+                            <a class="item" href="#">주요 학생회 성과</a>
+                            <a class="item" href="#">학생회칙</a>
+                            <a class="item" href="#">공약 게시판</a>
+                            <a class="item" href="#">회의록</a>
+                            <a class="item" href="#">예/결산</a>
+                            <a class="item" href="#">기타</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            투표 / 설문 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="{% url 'vote' %}">투표</a>
+                            <a class="item" href="{% url 'survey' %}">설문</a>
+                            <a class="item" href="{% url 'debate' %}">토론/토의</a>
+                            <a class="item" href="#">토론 및 설문 진행상황</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            건의 / 제보 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">학생회에 건의합니다</a>
+                            <a class="item" href="#">학생회에 질문합니다</a>
+                            <a class="item" href="#">학생회에 제안합니다</a>
+                            <a class="item" href="#">학생회에 제보합니다</a>
+                            <a class="item" href="#">자주 묻는 질문</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            행사 / 프로젝트 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">우리들의 행사</a>
+                            <a class="item" href="#">팀원 구합니다</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            Study Platform <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">Study Guide</a>
+                            <a class="item" href="#">과목별 튜터링</a>
+                            <a class="item" href="#">튜터 게시판</a>
+                            <a class="item" href="#">자료 게시판</a>
+                            <a class="item" href="#">자유 게시판</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right menu">
+                    <div class="right item">
+                        <div class="ui action input">
+                            <input type="text" placeholder="정보 입력">
+                            <div class="ui button">검색</div>
+                        </div>
+                        <a class="item">회원가입</a>
+                        <a class="item">로그인</a>
+                        <a class="item">my DGIST</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="side-bar" class="ui vertical menu">
+                <div class="item">
+                    <h3 class="ui header">투표 / 설문</h4>
+                    <div class="menu">
+                    <a class="item">투표</a>
+                    <a class="item">설문</a>
+                    <a class="item">토론 / 토의</a>
+                    <a class="item">토론 및 설문 진행상황</a>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="">
+                <h2>설문</h2>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="image">
+                        <img src="https://semantic-ui.com/images/wireframe/image.png">
+                        </div>
+                        <div class="content">
+                        <a class="header">설문 제목</a>
+                        <div class="meta">
+                            <span>설문 설명</span>
+                        </div>
+                        <div class="description">
+                            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+                        </div>
+                        <div class="extra">
+                            기한: 20xx년 x월 x일 ~ 20xx년 x월 x일
+                        </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                        <img src="https://semantic-ui.com/images/wireframe/image.png">
+                        </div>
+                        <div class="content">
+                        <a class="header">농촌봉사활동 수요조사</a>
+                        <div class="meta">
+                            <span>농촌봉사활동 수요조사를 위한 설문입니다.</span>
+                        </div>
+                        <div class="description">
+                            <p>안녕하세요. DGIST 제 4대 총학생회 LINK입니다. 이번 8월 15일부터 8월 18일까지 KAIST와 함께 농촌봉사활동을 가기로 결정되었습니다. 관심 있으신 분은 아래 링크를 통해 수요조사에 참여해주시기
+                                바랍니다. 감사합니다.
+                            </p>
+                        </div>
+                        <div class="extra">
+                                기한: 2018년 7월 1일 ~ 2018년 7월 15일
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>
