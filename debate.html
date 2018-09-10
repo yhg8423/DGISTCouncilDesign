@@ -1,0 +1,290 @@
+<html>
+    <head>
+        <!-- Semantic UI -->
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <link rel="stylesheet" type="text/css" href="board.css">
+        <script src="semantic/semantic.min.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header" class="">
+            <div id="navigation" class="ui stackable secondary pointing menu">
+                <div class="left menu">
+                    <div class="right item">
+                        <div class="item">
+                            DGIST 총학생회
+                        </div>
+                        <div class="ui simple dropdown item">
+                            총학생회 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">DGIST 총학생회 LINK</a>
+                            <a class="item" href="#">조직도</a>
+                            <a class="item" href="{% url 'notice' %}">공지사항</a>
+                            <a class="item" href="#">주요 학생회 성과</a>
+                            <a class="item" href="#">학생회칙</a>
+                            <a class="item" href="#">공약 게시판</a>
+                            <a class="item" href="#">회의록</a>
+                            <a class="item" href="#">예/결산</a>
+                            <a class="item" href="#">기타</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            투표 / 설문 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="{% url 'vote' %}">투표</a>
+                            <a class="item" href="{% url 'survey' %}">설문</a>
+                            <a class="item" href="{% url 'debate' %}">토론/토의</a>
+                            <a class="item" href="#">토론 및 설문 진행상황</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            건의 / 제보 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">학생회에 건의합니다</a>
+                            <a class="item" href="#">학생회에 질문합니다</a>
+                            <a class="item" href="#">학생회에 제안합니다</a>
+                            <a class="item" href="#">학생회에 제보합니다</a>
+                            <a class="item" href="#">자주 묻는 질문</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            행사 / 프로젝트 <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">우리들의 행사</a>
+                            <a class="item" href="#">팀원 구합니다</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            Study Platform <i class="dropdown icon"></i>
+                            <div class="menu">
+                            <a class="item" href="#">Study Guide</a>
+                            <a class="item" href="#">과목별 튜터링</a>
+                            <a class="item" href="#">튜터 게시판</a>
+                            <a class="item" href="#">자료 게시판</a>
+                            <a class="item" href="#">자유 게시판</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right menu">
+                    <div class="right item">
+                        <div class="ui action input">
+                            <input type="text" placeholder="정보 입력">
+                            <div class="ui button">검색</div>
+                        </div>
+                        <a class="item">회원가입</a>
+                        <a class="item">로그인</a>
+                        <a class="item">my DGIST</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="side-bar" class="ui vertical menu">
+                <div class="item">
+                    <h3 class="ui header">투표 / 설문</h4>
+                    <div class="menu">
+                    <a class="item">투표</a>
+                    <a class="item">설문</a>
+                    <a class="item">토론 / 토의</a>
+                    <a class="item">토론 및 설문 진행상황</a>
+                    </div>
+                </div>
+            </div>
+            <div id="content" class="">
+                <div id="board-view" class="ui segment">
+                    <h4 class="ui left floated header">주제</h2>
+                    <div class="ui clearing divider"></div>
+                    <h2 class="ui center aligned header">토론 글 제목</h2>
+                    <div class="ui clearing divider"></div>
+                    <h4 class="ui right floated header">작성자: 여포</h2>
+                    <div class="ui clearing divider"></div>
+                    <p>아이고 아이고 저리고 어이구 어이쿠 아이쿠 오이 사이 인도인도 인도사이다<br/><br/>
+                        빠빠빠나나나 빠바밥나나나나나 빠빠나나 빠나나나나나나 우 아무고토 못했는데 왜 시간은 벌써 3시 아~~~이스 아메리카노 마셔도 왜~~~ 더 후끈후끈하지 태양은 우릴 비추고 아스팔트 온도 50도 와우 원해요 에너지 차갑거나 아예 더 뜨겁게 썸머 매직 반짝인 그 오션 위로 나 벌써 날아 올라<br/><br/>
+                        빠빠빨간맛 궁금해 동무 사상에 점점 더 녹아든 소비에트 그맛 공산당 선언 찾아봐 베이베 내가 제일 좋아하는 건 프롤레타리아 마르크스 그늘 아래 단결하고 뜨거운 혁명의 피바람은 불고 부르주아 세상 엎어버릴 나인틴 우린 제법 급진적이고 멋져 좋아~ 첫 눈에 반해버린~ 낫과망치가 생각나~ 내 방식대로 할래 빠바바바바바바바 빠바밤 <br/><br/>
+                        빠빠빨간맛 궁금해 동무 사상에 점점 더 녹아든 소비에트 그맛 자본론 1권 찾아봐 베이베 내가 제일 좋아하는 건 프롤레타리아 혁명에 빠져 부르주아지들을 그을려 우린 RED RED Ah 말 안 해도 알아주면 안 돼 혁명의 불길은 더 커져 가는데다 흘려버린 노동자의 피 같이 이러다 망할지 몰라~<br/><br/>
+                        그러니 말해 그래그래 말해 그러니 말해 그래그래 말해 너의 색깔론 날 물들여줘 더 진하게 혁명적이게<br/><br/>
+                    </p>
+                    <div class="ui clearing divider"></div>
+                    <div id="reaction">
+                        <div class="ui labeled button" tabindex="0">
+                            <div class="ui button">
+                                <i class="heart icon"></i> Like
+                            </div>
+                            <a class="ui basic label">
+                                2,048
+                            </a>
+                        </div>
+                        <div class="ui labeled button" tabindex="0">
+                            <div class="ui button">
+                                <i class="fork icon"></i> share
+                            </div>
+                            <a class="ui basic label">
+                                1,024
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui clearing divider"></div>
+                    <div id="board-comments">    
+                        <div class="ui comments" style="max-width:100%">
+                            <h3 class="ui dividing header">Comments</h3>
+                            <div class="comment">
+                                <a class="avatar">
+                                <img src="https://semantic-ui.com/images/avatar/small/matt.jpg" style="height:auto;">
+                                </a>
+                                <div class="content">
+                                <a class="author">학생 1</a>
+                                <div class="metadata">
+                                    <span class="date">Today at 5:42PM</span>
+                                </div>
+                                <div class="text">
+                                    어그로 자제좀;;
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                <img src="https://semantic-ui.com/images/avatar/small/elliot.jpg" style="height:auto;">
+                                </a>
+                                <div class="content">
+                                <a class="author">학생 2</a>
+                                <div class="metadata">
+                                    <span class="date">Yesterday at 12:30AM</span>
+                                </div>
+                                <div class="text">
+                                    <p>빨간맛이 아니라 붉은 맛이지;;</p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                                </div>
+                                <div class="comments">
+                                <div class="comment">
+                                    <a class="avatar">
+                                    <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg" style="height:auto;">
+                                    </a>
+                                    <div class="content">
+                                    <a class="author">Heiz</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        그렇게 따지면 빨갱이는 붉갱이냐?
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                <img src="https://semantic-ui.com/images/avatar/small/joe.jpg" style="height:auto;">
+                                </a>
+                                <div class="content">
+                                <a class="author">바니</a>
+                                <div class="metadata">
+                                    <span class="date">1 days ago</span>
+                                </div>
+                                <div class="text">
+                                    빠나나보다는 파인애플이다
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">Reply</a>
+                                </div>
+                                </div>
+                            </div>
+                            <form class="ui reply form">
+                                <div class="field">
+                                <textarea></textarea>
+                                </div>
+                                <div class="ui blue labeled submit icon button">
+                                <i class="icon edit"></i> Add Reply
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <table class="ui unstackable table">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th class="right aligned">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>Jamie</td>
+                        <td>Approved</td>
+                        <td class="right aligned">Requires call</td>
+                        </tr>
+                        <tr>
+                        <td>Jill</td>
+                        <td>Denied</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                        <tr>
+                        <td>John</td>
+                        <td>Approved</td>
+                        <td class="right aligned">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <div id="page" class="ui pagination menu">
+                    <a class="active item">
+                      1
+                    </a>
+                    <div class="disabled item">
+                      ...
+                    </div>
+                    <a class="item">
+                      10
+                    </a>
+                    <a class="item">
+                      11
+                    </a>
+                    <a class="item">
+                      12
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>
