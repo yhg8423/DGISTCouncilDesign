@@ -1,0 +1,30 @@
+#main #side-bar .item .menu .item {
+    font-size: 15px;
+}
+
+#main #side-bar {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+#main #content {
+    display: inline-block;
+    width: 70%;
+    margin-left: 5%;
+    vertical-align: top;
+}
+
+#main #content #page {
+    float: right;
+}
+
+#main #content #course {
+    margin-top: 10%;
+}
+
+#main #content #course .ui.cards .card {
+    width: 20%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
