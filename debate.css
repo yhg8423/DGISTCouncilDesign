@@ -1,0 +1,20 @@
+#main #side-bar .item .menu .item {
+    font-size: 15px;
+}
+
+#main #side-bar {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+#main #content {
+    display: inline-block;
+    width: 70%;
+    margin-left: 5%;
+    vertical-align: top;
+}
+
+#main #content #page {
+    float: right;
+}
